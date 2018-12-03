@@ -1,0 +1,122 @@
+p {
+    font-size: 20px;
+    font-weight: bold;
+    em {
+        background: yellow;
+        padding: 5px;
+        
+    }
+}
+#visual-container {
+    height: 100%;
+    overflow: scroll !important;
+}
+/*
+ * JSON Tree Viewer
+ * http://github.com/summerstyle/jsonTreeViewer
+ *
+ * Copyright 2017 Vera Lobacheva (http://iamvera.com)
+ * Released under the MIT license (LICENSE.txt)
+ */
+
+
+/* Background for the tree. May use for <body> element */
+.jsontree_bg {
+    background: #FFF;
+}
+
+/* Styles for the container of the tree (e.g. fonts, margins etc.) */
+.jsontree_tree {
+    margin-left: 30px;
+    font-family: 'PT Mono', monospace;
+    font-size: 14px;
+}
+
+/* Styles for a list of child nodes */
+.jsontree_child-nodes {
+    display: none;
+    margin-left: 35px; 
+    margin-bottom: 5px;
+    line-height: 2;
+}
+.jsontree_node_expanded > .jsontree_value-wrapper > .jsontree_value > .jsontree_child-nodes {
+    display: block;
+}
+
+/* Styles for labels */
+.jsontree_label-wrapper {
+    float: left;
+    margin-right: 8px;
+}
+.jsontree_label {
+    font-weight: normal;
+    vertical-align: top;
+    color: #000;
+    position: relative;
+    padding: 1px;
+    border-radius: 4px;
+    cursor: default;
+}
+.jsontree_node_marked > .jsontree_label-wrapper > .jsontree_label {
+    background: #fff2aa;
+}
+
+/* Styles for values */
+.jsontree_value-wrapper {
+    display: block;
+    overflow: hidden;
+}
+.jsontree_node_complex > .jsontree_value-wrapper {
+    overflow: inherit;
+}
+.jsontree_value { 
+    vertical-align: top;
+    display: inline;
+}
+.jsontree_value_null {
+    color: #777;
+    font-weight: bold;
+}
+.jsontree_value_string {
+    color: #025900;
+    font-weight: bold;
+}
+.jsontree_value_number {
+    color: #000E59;
+    font-weight: bold;
+}
+.jsontree_value_boolean {
+    color: #600100;
+    font-weight: bold;
+}
+
+/* Styles for active elements */
+.jsontree_expand-button {
+    position: absolute;
+    top: 3px;
+    left: -15px;
+    display: block;
+    width: 11px;
+    height: 11px;
+    background: #2eef59;
+//    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNDIgNDIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQyIDQyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiPjxnPjxzY3JpcHQgeG1sbnM9IiIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojMDAwMDAwIj48L3NjcmlwdD48c2NyaXB0IHhtbG5zPSIiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6IzAwMDAwMCI+PC9zY3JpcHQ+PHBhdGggZD0iTTM3LjA1OSwxNkgyNlY0Ljk0MUMyNiwyLjIyNCwyMy43MTgsMCwyMSwwcy01LDIuMjI0LTUsNC45NDFWMTZINC45NDFDMi4yMjQsMTYsMCwxOC4yODIsMCwyMXMyLjIyNCw1LDQuOTQxLDVIMTZ2MTEuMDU5ICBDMTYsMzkuNzc2LDE4LjI4Miw0MiwyMSw0MnM1LTIuMjI0LDUtNC45NDFWMjZoMTEuMDU5QzM5Ljc3NiwyNiw0MiwyMy43MTgsNDIsMjFTMzkuNzc2LDE2LDM3LjA1OSwxNnoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6IzAwMDAwMCI+PC9wYXRoPjwvZz4gPC9zdmc+);
+}
+.jsontree_node_expanded > .jsontree_label-wrapper > .jsontree_label > .jsontree_expand-button {
+    background-position: 0 -11px;
+}
+.jsontree_show-more {
+    cursor: pointer;
+}
+.jsontree_node_expanded > .jsontree_value-wrapper > .jsontree_value > .jsontree_show-more {
+    display: none;
+}
+.jsontree_node_empty > .jsontree_label-wrapper > .jsontree_label > .jsontree_expand-button,
+.jsontree_node_empty > .jsontree_value-wrapper > .jsontree_value > .jsontree_show-more {
+    display: none !important;
+}
+.jsontree_node_complex > .jsontree_label-wrapper > .jsontree_label {
+    cursor: pointer;
+}
+.jsontree_node_empty > .jsontree_label-wrapper > .jsontree_label {
+    cursor: default !important;
+}
